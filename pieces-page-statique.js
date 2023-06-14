@@ -154,3 +154,11 @@ for(let i=0 ; i < nomsDisponibles.length ; i++){
 }
 
 document.querySelector('.disponibles').appendChild(disponiblesElement);
+
+//Gradation
+const inputPrixMax = document.querySelector('#prix-max')
+inputPrixMax.addEventListener('input', function() {
+    const piecesFiltrees = pieces.filter(function(piece){
+    return piece.prix <= inputPrixMax.value;
+    });
+})
